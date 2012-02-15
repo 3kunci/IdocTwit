@@ -142,7 +142,14 @@
 }
 
 - (UIImage *)fetchAvatarImageFromUrl:(NSString *)imageURL {
-    return nil;
+    UIImage *fetchedImage = [self.imageCache objectForKey:imageURL];
+    if (!fetchedImage) {
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
+        fetchedImage = [UIImage imageWithData:imageData];
+        [self.imageCache setObject:fetchedImage forKey:imageURL];
+    }
+    
+    return fetchedImage;
 }
 
 #pragma mark - View lifecycle
@@ -165,6 +172,27 @@
 
 #pragma mark - Table view data source & delegate methods
 
+- (void)fetchImageForCellwithTweet:(Tweet *)aTweet {
+    dispatch_queue_t fetchAvatarQueue = dispatch_queue_create("Avatar Fetch", NULL);
+    dispatch_async(fetchAvatarQueue, ^{
+        UIImage *fetchedImage = [self.imageCache objectForKey:aTweet.avatarLink];
+        if (!fetchedImage) {
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:aTweet.avatarLink]];
+            fetchedImage = [UIImage imageWithData:imageData];
+            [self.imageCache setObject:fetchedImage forKey:aTweet.avatarLink];
+        }
+        
+        aTweet.avatarImage = fetchedImage;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSInteger cellIndex = [self.tweets indexOfObject:aTweet];
+            TweetCell *tweetCell = (TweetCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:cellIndex inSection:0]];
+            tweetCell.avatarView.image = aTweet.avatarImage;
+        });
+    });
+    dispatch_release(fetchAvatarQueue);
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -179,24 +207,8 @@
     Tweet *aTweet = [self.tweets objectAtIndex:indexPath.row];
     cell.usernameLabel.text = [NSString stringWithFormat:@"@%@", aTweet.username];
     cell.tweetLabel.text = aTweet.tweet;
-    
     cell.avatarView.image = nil;
-    dispatch_queue_t fetchImageQueue = dispatch_queue_create("Avatar Fetch", NULL);
-    dispatch_async(fetchImageQueue, ^{
-        UIImage *fetchedImage = [self.imageCache objectForKey:aTweet.avatarLink];
-        if (!fetchedImage) {
-            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:aTweet.avatarLink]];
-            fetchedImage = [UIImage imageWithData:imageData];
-            [self.imageCache setObject:fetchedImage forKey:aTweet.avatarLink];
-        }
-        
-        aTweet.avatarImage = fetchedImage;
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            cell.avatarView.image = fetchedImage;
-        });
-    });
-    dispatch_release(fetchImageQueue);
+    [self fetchImageForCellwithTweet:aTweet];
     
     return cell;
 }
