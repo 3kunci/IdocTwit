@@ -11,6 +11,7 @@
 #import <Twitter/Twitter.h>
 #import "Tweet.h"
 #import "TweetCell.h"
+#import "TweetDetailViewController.h"
 
 @interface TimelineViewController()
 
@@ -169,6 +170,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    Tweet *selectedTweet = [self.tweets objectAtIndex:selectedIndexPath.row];
+    
+    TweetDetailViewController *tweetDetailVC = (TweetDetailViewController *)segue.destinationViewController;
+    tweetDetailVC.tweet = selectedTweet;
 }
 
 

@@ -19,6 +19,7 @@
 		06978C3514EBB0CA0057DC75 /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06978C3314EBB0CA0057DC75 /* TweetCell.m */; };
 		06978C3D14EBB2D90057DC75 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06978C3B14EBB2D90057DC75 /* Accounts.framework */; };
 		06978C3E14EBB2D90057DC75 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06978C3C14EBB2D90057DC75 /* Twitter.framework */; };
+		06978C4614EBC2DB0057DC75 /* TweetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06978C4514EBC2DA0057DC75 /* TweetDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		06978C3314EBB0CA0057DC75 /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
 		06978C3B14EBB2D90057DC75 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		06978C3C14EBB2D90057DC75 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		06978C4414EBC2DA0057DC75 /* TweetDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetDetailViewController.h; sourceTree = "<group>"; };
+		06978C4514EBC2DA0057DC75 /* TweetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +95,13 @@
 			isa = PBXGroup;
 			children = (
 				06978C3614EBB0D60057DC75 /* Helper */,
+				06978C2714EBAE7E0057DC75 /* MainStoryboard.storyboard */,
 				06978C1F14EBAE420057DC75 /* AppDelegate.h */,
 				06978C2014EBAE420057DC75 /* AppDelegate.m */,
 				06978C2D14EBB0A40057DC75 /* TimelineViewController.h */,
 				06978C2E14EBB0A40057DC75 /* TimelineViewController.m */,
-				06978C2714EBAE7E0057DC75 /* MainStoryboard.storyboard */,
+				06978C4414EBC2DA0057DC75 /* TweetDetailViewController.h */,
+				06978C4514EBC2DA0057DC75 /* TweetDetailViewController.m */,
 				06978C1714EBAE420057DC75 /* Supporting Files */,
 			);
 			path = IdocTwit;
@@ -192,6 +197,7 @@
 				06978C2F14EBB0A40057DC75 /* TimelineViewController.m in Sources */,
 				06978C3414EBB0CA0057DC75 /* Tweet.m in Sources */,
 				06978C3514EBB0CA0057DC75 /* TweetCell.m in Sources */,
+				06978C4614EBC2DB0057DC75 /* TweetDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +304,7 @@
 				06978C2614EBAE420057DC75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
