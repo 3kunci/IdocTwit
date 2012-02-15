@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06978C1114EBAE420057DC75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06978C1014EBAE420057DC75 /* UIKit.framework */; };
+		06978C1314EBAE420057DC75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06978C1214EBAE420057DC75 /* Foundation.framework */; };
+		06978C1514EBAE420057DC75 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06978C1414EBAE420057DC75 /* CoreGraphics.framework */; };
+		06978C1B14EBAE420057DC75 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06978C1914EBAE420057DC75 /* InfoPlist.strings */; };
+		06978C1D14EBAE420057DC75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06978C1C14EBAE420057DC75 /* main.m */; };
+		06978C2114EBAE420057DC75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06978C2014EBAE420057DC75 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06978C0C14EBAE420057DC75 /* IdocTwit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdocTwit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06978C1014EBAE420057DC75 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		06978C1214EBAE420057DC75 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		06978C1414EBAE420057DC75 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		06978C1814EBAE420057DC75 /* IdocTwit-Info.plist */ = {isa = PBXFileReference; path = "IdocTwit-Info.plist"; sourceTree = "<group>"; };
+		06978C1A14EBAE420057DC75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		06978C1C14EBAE420057DC75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06978C1E14EBAE420057DC75 /* IdocTwit-Prefix.pch */ = {isa = PBXFileReference; path = "IdocTwit-Prefix.pch"; sourceTree = "<group>"; };
+		06978C1F14EBAE420057DC75 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		06978C2014EBAE420057DC75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06978C0914EBAE420057DC75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06978C1114EBAE420057DC75 /* UIKit.framework in Frameworks */,
+				06978C1314EBAE420057DC75 /* Foundation.framework in Frameworks */,
+				06978C1514EBAE420057DC75 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06978C0114EBAE410057DC75 = {
+			isa = PBXGroup;
+			children = (
+				06978C1614EBAE420057DC75 /* IdocTwit */,
+				06978C0F14EBAE420057DC75 /* Frameworks */,
+				06978C0D14EBAE420057DC75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		06978C0D14EBAE420057DC75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06978C0C14EBAE420057DC75 /* IdocTwit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06978C0F14EBAE420057DC75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06978C1014EBAE420057DC75 /* UIKit.framework */,
+				06978C1214EBAE420057DC75 /* Foundation.framework */,
+				06978C1414EBAE420057DC75 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06978C1614EBAE420057DC75 /* IdocTwit */ = {
+			isa = PBXGroup;
+			children = (
+				06978C1F14EBAE420057DC75 /* AppDelegate.h */,
+				06978C2014EBAE420057DC75 /* AppDelegate.m */,
+				06978C1714EBAE420057DC75 /* Supporting Files */,
+			);
+			path = IdocTwit;
+			sourceTree = "<group>";
+		};
+		06978C1714EBAE420057DC75 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06978C1814EBAE420057DC75 /* IdocTwit-Info.plist */,
+				06978C1914EBAE420057DC75 /* InfoPlist.strings */,
+				06978C1C14EBAE420057DC75 /* main.m */,
+				06978C1E14EBAE420057DC75 /* IdocTwit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06978C0B14EBAE420057DC75 /* IdocTwit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06978C2414EBAE420057DC75 /* Build configuration list for PBXNativeTarget "IdocTwit" */;
+			buildPhases = (
+				06978C0814EBAE420057DC75 /* Sources */,
+				06978C0914EBAE420057DC75 /* Frameworks */,
+				06978C0A14EBAE420057DC75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IdocTwit;
+			productName = IdocTwit;
+			productReference = 06978C0C14EBAE420057DC75 /* IdocTwit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06978C0314EBAE410057DC75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = 3kunci;
+			};
+			buildConfigurationList = 06978C0614EBAE410057DC75 /* Build configuration list for PBXProject "IdocTwit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 06978C0114EBAE410057DC75;
+			productRefGroup = 06978C0D14EBAE420057DC75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06978C0B14EBAE420057DC75 /* IdocTwit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06978C0A14EBAE420057DC75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06978C1B14EBAE420057DC75 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06978C0814EBAE420057DC75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06978C1D14EBAE420057DC75 /* main.m in Sources */,
+				06978C2114EBAE420057DC75 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		06978C1914EBAE420057DC75 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06978C1A14EBAE420057DC75 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06978C2214EBAE420057DC75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		06978C2314EBAE420057DC75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06978C2514EBAE420057DC75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IdocTwit/IdocTwit-Prefix.pch";
+				INFOPLIST_FILE = "IdocTwit/IdocTwit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		06978C2614EBAE420057DC75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IdocTwit/IdocTwit-Prefix.pch";
+				INFOPLIST_FILE = "IdocTwit/IdocTwit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06978C0614EBAE410057DC75 /* Build configuration list for PBXProject "IdocTwit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06978C2214EBAE420057DC75 /* Debug */,
+				06978C2314EBAE420057DC75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06978C2414EBAE420057DC75 /* Build configuration list for PBXNativeTarget "IdocTwit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06978C2514EBAE420057DC75 /* Debug */,
+				06978C2614EBAE420057DC75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06978C0314EBAE410057DC75 /* Project object */;
+}
