@@ -146,7 +146,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#pragma mark - Table view data source
+#pragma mark - Table view data source & delegate methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -157,13 +157,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
+    TweetCell *cell = (TweetCell *)[tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
     
     Tweet *aTweet = [self.tweets objectAtIndex:indexPath.row];
-    cell.textLabel.text = aTweet.tweet;
-    cell.detailTextLabel.text = aTweet.username;
-
+    cell.avatarView.image = aTweet.avatarImage;
+    cell.usernameLabel.text = [NSString stringWithFormat:@"@%@", aTweet.username];
+    cell.tweetLabel.text = aTweet.tweet;
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
