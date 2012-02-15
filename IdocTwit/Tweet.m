@@ -15,6 +15,6 @@
 @synthesize avatarImage;
 @synthesize tweet;
 @synthesize date;
-
+@synthesize avatarLink;
 
 @end

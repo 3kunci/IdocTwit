@@ -15,5 +15,6 @@
 @property (strong, nonatomic) UIImage *avatarImage;
 @property (strong, nonatomic) NSString *tweet;
 @property (strong, nonatomic) NSDate *date;
+@property (strong, nonatomic) NSString *avatarLink;
 
 @end

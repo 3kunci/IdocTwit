@@ -34,7 +34,7 @@
     if (self.tweet) {
         self.avatarView.image = self.tweet.avatarImage;
         self.fullnameLabel.text = self.tweet.fullname;
-        self.usernameLabel.text = self.tweet.username;
+        self.usernameLabel.text = [NSString stringWithFormat:@"@%@", self.tweet.username];
         self.tweetLabel.text = self.tweet.tweet;
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

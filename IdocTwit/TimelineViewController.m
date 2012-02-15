@@ -20,6 +20,8 @@
 @property (strong, nonatomic) ACAccountStore *accountStore;
 @property (strong, nonatomic) NSURL *url;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *refreshButton;
+@property (strong, nonatomic) NSMutableDictionary *imageCache;
+
 
 - (NSMutableArray *)processingTweetsResponses:(NSData *)responseData;
 - (void)refreshTweets;
@@ -34,6 +36,7 @@
 @synthesize accountStore = _accountStore;
 @synthesize url = _url;
 @synthesize refreshButton = _refreshButton;
+@synthesize imageCache = _imageCache;
 
 - (NSDateFormatter *)dateFormatter {
     if (!_dateFormatter) {
@@ -60,6 +63,14 @@
     return _url;
 }
 
+- (NSMutableDictionary *)imageCache {
+    if (!_imageCache) {
+        _imageCache = [[NSMutableDictionary alloc] init];
+    }
+    
+    return _imageCache;
+}
+
 #pragma mark - Fetching Tweets Methods
 
 - (IBAction)refresh:(id)sender {
@@ -82,9 +93,10 @@
         aTweet.fullname = [[tweetDictionary objectForKey:@"user"] objectForKey:@"name"];
         
         // get the image from the url
-        NSString *imageUrl = [[tweetDictionary objectForKey:@"user"] objectForKey:@"profile_image_url"];
-        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
-        aTweet.avatarImage = [UIImage imageWithData:imageData];
+//        NSString *imageUrl = [[tweetDictionary objectForKey:@"user"] objectForKey:@"profile_image_url"];
+//        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+//        aTweet.avatarImage = [UIImage imageWithData:imageData];
+        aTweet.avatarLink = [[tweetDictionary objectForKey:@"user"] objectForKey:@"profile_image_url"];
         
         // get the date
         NSString *dateString = [tweetDictionary objectForKey:@"created_at"];
@@ -129,6 +141,10 @@
                                  }];
 }
 
+- (UIImage *)fetchAvatarImageFromUrl:(NSString *)imageURL {
+    return nil;
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
@@ -161,9 +177,26 @@
     TweetCell *cell = (TweetCell *)[tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
     
     Tweet *aTweet = [self.tweets objectAtIndex:indexPath.row];
-    cell.avatarView.image = aTweet.avatarImage;
     cell.usernameLabel.text = [NSString stringWithFormat:@"@%@", aTweet.username];
     cell.tweetLabel.text = aTweet.tweet;
+    
+    cell.avatarView.image = nil;
+    dispatch_queue_t fetchImageQueue = dispatch_queue_create("Avatar Fetch", NULL);
+    dispatch_async(fetchImageQueue, ^{
+        UIImage *fetchedImage = [self.imageCache objectForKey:aTweet.avatarLink];
+        if (!fetchedImage) {
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:aTweet.avatarLink]];
+            fetchedImage = [UIImage imageWithData:imageData];
+            [self.imageCache setObject:fetchedImage forKey:aTweet.avatarLink];
+        }
+        
+        aTweet.avatarImage = fetchedImage;
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.avatarView.image = fetchedImage;
+        });
+    });
+    dispatch_release(fetchImageQueue);
     
     return cell;
 }
