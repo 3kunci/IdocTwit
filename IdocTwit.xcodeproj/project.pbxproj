@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		068741F314EC2C8F00F0DE8E /* TwitterAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068741F214EC2C8F00F0DE8E /* TwitterAPIViewController.m */; };
 		06978C1114EBAE420057DC75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06978C1014EBAE420057DC75 /* UIKit.framework */; };
 		06978C1314EBAE420057DC75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06978C1214EBAE420057DC75 /* Foundation.framework */; };
 		06978C1514EBAE420057DC75 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06978C1414EBAE420057DC75 /* CoreGraphics.framework */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		068741F114EC2C8F00F0DE8E /* TwitterAPIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterAPIViewController.h; sourceTree = "<group>"; };
+		068741F214EC2C8F00F0DE8E /* TwitterAPIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterAPIViewController.m; sourceTree = "<group>"; };
 		06978C0C14EBAE420057DC75 /* IdocTwit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdocTwit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06978C1014EBAE420057DC75 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		06978C1214EBAE420057DC75 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,6 +105,8 @@
 				06978C2E14EBB0A40057DC75 /* TimelineViewController.m */,
 				06978C4414EBC2DA0057DC75 /* TweetDetailViewController.h */,
 				06978C4514EBC2DA0057DC75 /* TweetDetailViewController.m */,
+				068741F114EC2C8F00F0DE8E /* TwitterAPIViewController.h */,
+				068741F214EC2C8F00F0DE8E /* TwitterAPIViewController.m */,
 				06978C1714EBAE420057DC75 /* Supporting Files */,
 			);
 			path = IdocTwit;
@@ -198,6 +203,7 @@
 				06978C3414EBB0CA0057DC75 /* Tweet.m in Sources */,
 				06978C3514EBB0CA0057DC75 /* TweetCell.m in Sources */,
 				06978C4614EBC2DB0057DC75 /* TweetDetailViewController.m in Sources */,
+				068741F314EC2C8F00F0DE8E /* TwitterAPIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

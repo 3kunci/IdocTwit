@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TwitterAPIViewController.h"
 
-@interface TimelineViewController : UITableViewController
+@interface TimelineViewController : UITableViewController <TwitterAPIViewControllerDelegate>
 
 @end
