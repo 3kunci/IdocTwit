@@ -21,7 +21,7 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="-61" y="-881"/>
+            <point key="canvasLocation" x="-433" y="-805"/>
         </scene>
         <scene sceneID="z9N-jk-QBQ">
             <objects>
@@ -65,7 +65,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bVZ-NS-O0N" kind="modal" identifier="PickImage" id="tz1-CK-ee6"/>
+                                    <segue destination="bVZ-NS-O0N" kind="modal" identifier="PickImage" modalTransitionStyle="flipHorizontal" id="tz1-CK-ee6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,7 +77,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="469" y="-656"/>
+            <point key="canvasLocation" x="113" y="-348"/>
         </scene>
         <scene sceneID="Iru-kk-4me">
             <objects>
@@ -122,7 +122,7 @@
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="905" y="-656"/>
+            <point key="canvasLocation" x="549" y="-348"/>
         </scene>
         <scene sceneID="QKm-2n-gro">
             <objects>
@@ -191,7 +191,7 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="955" y="-1626"/>
+            <point key="canvasLocation" x="599" y="-1318"/>
         </scene>
         <scene sceneID="uDA-vc-9DP">
             <objects>
@@ -319,7 +319,7 @@
                     <navigationItem key="navigationItem" title="Twitter APIs" id="R6P-Dx-TsX"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1515" y="-1901"/>
+            <point key="canvasLocation" x="1159" y="-1593"/>
         </scene>
         <scene sceneID="d0p-cQ-Xji">
             <objects>
@@ -376,7 +376,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1515" y="-1310"/>
+            <point key="canvasLocation" x="1159" y="-1002"/>
         </scene>
         <scene sceneID="eXX-AT-9Ht">
             <objects>
@@ -394,7 +394,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="469" y="-1638"/>
+            <point key="canvasLocation" x="113" y="-1330"/>
         </scene>
     </scenes>
     <resources>
