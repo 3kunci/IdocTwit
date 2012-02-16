@@ -11,4 +11,7 @@
 
 @interface TimelineViewController : UITableViewController <TwitterAPIViewControllerDelegate>
 
+@property (strong, nonatomic) NSURL *url;
+@property (nonatomic) NSUInteger selectedAPI;
+
 @end

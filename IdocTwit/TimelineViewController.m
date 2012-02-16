@@ -18,11 +18,8 @@
 @property (strong, nonatomic) NSArray *tweets;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) ACAccountStore *accountStore;
-@property (strong, nonatomic) NSURL *url;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *refreshButton;
 @property (strong, nonatomic) NSMutableDictionary *imageCache;
-@property (nonatomic) NSUInteger selectedAPI;
-
 
 - (NSMutableArray *)processingTweetsResponses:(NSData *)responseData;
 - (void)refreshTweets;
@@ -72,6 +69,7 @@
     
     return _imageCache;
 }
+
 
 #pragma mark - Fetching Tweets Methods
 
@@ -146,17 +144,6 @@
     return nil;
 }
 
-- (UIImage *)fetchAvatarImageFromUrl:(NSString *)imageURL {
-    UIImage *fetchedImage = [self.imageCache objectForKey:imageURL];
-    if (!fetchedImage) {
-        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
-        fetchedImage = [UIImage imageWithData:imageData];
-        [self.imageCache setObject:fetchedImage forKey:imageURL];
-    }
-    
-    return fetchedImage;
-}
-
 - (void)refreshTweets {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self.refreshButton setEnabled:NO];
@@ -188,26 +175,6 @@
      }];
 }
 
-#pragma mark - View lifecycle
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self refreshTweets];
-}
-
-- (void)viewDidUnload {
-    [self setRefreshButton:nil];
-    [super viewDidUnload];
-
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark - Table view data source & delegate methods
-
 - (void)fetchImageForCellwithTweet:(Tweet *)aTweet {
     dispatch_queue_t fetchAvatarQueue = dispatch_queue_create("Avatar Fetch", NULL);
     dispatch_async(fetchAvatarQueue, ^{
@@ -228,6 +195,28 @@
     });
     dispatch_release(fetchAvatarQueue);
 }
+
+
+#pragma mark - View lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self refreshTweets];
+}
+
+- (void)viewDidUnload {
+    [self setRefreshButton:nil];
+    [super viewDidUnload];
+
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+#pragma mark - Table view data source & delegate methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -267,6 +256,7 @@
         twitterAPIVC.delegate = self;
     }
 }
+
 
 #pragma mark - Twitter API delegate methods
 
