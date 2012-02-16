@@ -10,7 +10,7 @@
 #import <Twitter/Twitter.h>
 
 @implementation TweetingViewController
-@synthesize tweetLabel;
+@synthesize tweetLabel, attachedImage;
 
 #pragma mark - View lifecycle
 
@@ -32,8 +32,25 @@
         TWTweetComposeViewController *tweetComposerViewController = [[TWTweetComposeViewController alloc] init];
         [tweetComposerViewController setInitialText:self.tweetLabel.text];
         
+        if (self.attachedImage) {
+            [tweetComposerViewController addImage:self.attachedImage];
+        }
+        
         [self presentModalViewController:tweetComposerViewController animated:YES];
     }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"PickImage"]) {
+        ImagePickerViewController *imagePickerVC = (ImagePickerViewController *)segue.destinationViewController;
+        imagePickerVC.delegate = self;
+    }
+}
+
+- (void)imagePickerController:(ImagePickerViewController *)controller didSelectImage:(UIImage *)image {
+    [self dismissModalViewControllerAnimated:YES];
+    
+    self.attachedImage = image;
 }
 
 @end

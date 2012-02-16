@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		06396AB114ECB2D8001174EC /* TweetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06396AB014ECB2D8001174EC /* TweetingViewController.m */; };
+		06396AB414ECBEE4001174EC /* goodguygreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06396AB214ECBEE4001174EC /* goodguygreg.jpg */; };
+		06396AB514ECBEE4001174EC /* successkid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06396AB314ECBEE4001174EC /* successkid.jpg */; };
+		06396ABB14ECBF2D001174EC /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06396ABA14ECBF2D001174EC /* ImagePickerViewController.m */; };
+		06396AC014ECC7FD001174EC /* timeline.png in Resources */ = {isa = PBXBuildFile; fileRef = 06396ABC14ECC7FD001174EC /* timeline.png */; };
+		06396AC114ECC7FD001174EC /* timeline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06396ABD14ECC7FD001174EC /* timeline@2x.png */; };
+		06396AC214ECC7FD001174EC /* tweet.png in Resources */ = {isa = PBXBuildFile; fileRef = 06396ABE14ECC7FD001174EC /* tweet.png */; };
+		06396AC314ECC7FD001174EC /* tweet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06396ABF14ECC7FD001174EC /* tweet@2x.png */; };
+		06396AC614ECC8D6001174EC /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 06396AC414ECC8D6001174EC /* gear.png */; };
+		06396AC714ECC8D6001174EC /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06396AC514ECC8D6001174EC /* gear@2x.png */; };
 		068741F314EC2C8F00F0DE8E /* TwitterAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068741F214EC2C8F00F0DE8E /* TwitterAPIViewController.m */; };
 		06978C1114EBAE420057DC75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06978C1014EBAE420057DC75 /* UIKit.framework */; };
 		06978C1314EBAE420057DC75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06978C1214EBAE420057DC75 /* Foundation.framework */; };
@@ -27,6 +36,16 @@
 /* Begin PBXFileReference section */
 		06396AAF14ECB2D8001174EC /* TweetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetingViewController.h; sourceTree = "<group>"; };
 		06396AB014ECB2D8001174EC /* TweetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetingViewController.m; sourceTree = "<group>"; };
+		06396AB214ECBEE4001174EC /* goodguygreg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = goodguygreg.jpg; sourceTree = "<group>"; };
+		06396AB314ECBEE4001174EC /* successkid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = successkid.jpg; sourceTree = "<group>"; };
+		06396AB914ECBF2D001174EC /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
+		06396ABA14ECBF2D001174EC /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
+		06396ABC14ECC7FD001174EC /* timeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline.png; sourceTree = "<group>"; };
+		06396ABD14ECC7FD001174EC /* timeline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeline@2x.png"; sourceTree = "<group>"; };
+		06396ABE14ECC7FD001174EC /* tweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tweet.png; sourceTree = "<group>"; };
+		06396ABF14ECC7FD001174EC /* tweet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tweet@2x.png"; sourceTree = "<group>"; };
+		06396AC414ECC8D6001174EC /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		06396AC514ECC8D6001174EC /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@2x.png"; sourceTree = "<group>"; };
 		068741F114EC2C8F00F0DE8E /* TwitterAPIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterAPIViewController.h; sourceTree = "<group>"; };
 		068741F214EC2C8F00F0DE8E /* TwitterAPIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterAPIViewController.m; sourceTree = "<group>"; };
 		06978C0C14EBAE420057DC75 /* IdocTwit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdocTwit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +131,8 @@
 				068741F214EC2C8F00F0DE8E /* TwitterAPIViewController.m */,
 				06396AAF14ECB2D8001174EC /* TweetingViewController.h */,
 				06396AB014ECB2D8001174EC /* TweetingViewController.m */,
+				06396AB914ECBF2D001174EC /* ImagePickerViewController.h */,
+				06396ABA14ECBF2D001174EC /* ImagePickerViewController.m */,
 				06978C1714EBAE420057DC75 /* Supporting Files */,
 			);
 			path = IdocTwit;
@@ -120,6 +141,14 @@
 		06978C1714EBAE420057DC75 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				06396ABC14ECC7FD001174EC /* timeline.png */,
+				06396ABD14ECC7FD001174EC /* timeline@2x.png */,
+				06396ABE14ECC7FD001174EC /* tweet.png */,
+				06396ABF14ECC7FD001174EC /* tweet@2x.png */,
+				06396AC414ECC8D6001174EC /* gear.png */,
+				06396AC514ECC8D6001174EC /* gear@2x.png */,
+				06396AB214ECBEE4001174EC /* goodguygreg.jpg */,
+				06396AB314ECBEE4001174EC /* successkid.jpg */,
 				06978C1814EBAE420057DC75 /* IdocTwit-Info.plist */,
 				06978C1914EBAE420057DC75 /* InfoPlist.strings */,
 				06978C1C14EBAE420057DC75 /* main.m */,
@@ -192,6 +221,14 @@
 			files = (
 				06978C1B14EBAE420057DC75 /* InfoPlist.strings in Resources */,
 				06978C2814EBAE7E0057DC75 /* MainStoryboard.storyboard in Resources */,
+				06396AB414ECBEE4001174EC /* goodguygreg.jpg in Resources */,
+				06396AB514ECBEE4001174EC /* successkid.jpg in Resources */,
+				06396AC014ECC7FD001174EC /* timeline.png in Resources */,
+				06396AC114ECC7FD001174EC /* timeline@2x.png in Resources */,
+				06396AC214ECC7FD001174EC /* tweet.png in Resources */,
+				06396AC314ECC7FD001174EC /* tweet@2x.png in Resources */,
+				06396AC614ECC8D6001174EC /* gear.png in Resources */,
+				06396AC714ECC8D6001174EC /* gear@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +247,7 @@
 				06978C4614EBC2DB0057DC75 /* TweetDetailViewController.m in Sources */,
 				068741F314EC2C8F00F0DE8E /* TwitterAPIViewController.m in Sources */,
 				06396AB114ECB2D8001174EC /* TweetingViewController.m in Sources */,
+				06396ABB14ECBF2D001174EC /* ImagePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
