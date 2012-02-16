@@ -8,6 +8,7 @@
 
 #import "TweetingViewController.h"
 #import <Twitter/Twitter.h>
+#import <QuartzCore/QuartzCore.h>
 
 @implementation TweetingViewController
 @synthesize tweetLabel, attachedImage;
@@ -47,8 +48,24 @@
     }
 }
 
+- (void)dismissThisController:(UIViewController *)controller {
+//    [self dismissModalViewControllerAnimated:YES];
+    [self.view setHidden:NO];
+    
+    [UIView animateWithDuration:0.5 
+                     animations:^{
+                         [controller.view setAlpha:0.0];
+                     } 
+                     completion:^(BOOL finished) {
+                         [controller willMoveToParentViewController:nil];
+                         [controller removeFromParentViewController];
+                         [controller.view removeFromSuperview];                         
+                     }];
+    
+}
+
 - (void)imagePickerController:(ImagePickerViewController *)controller didSelectImage:(UIImage *)image {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissThisController:controller];
     
     self.attachedImage = image;
 }

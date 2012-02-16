@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060C886214ECF79E002B7DEA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 060C886114ECF79E002B7DEA /* icon.png */; };
+		060C886514ECF7B4002B7DEA /* icon copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 060C886414ECF7B4002B7DEA /* icon copy.png */; };
+		060C886C14ECFE7F002B7DEA /* NewspaperSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 060C886B14ECFE7F002B7DEA /* NewspaperSegue.m */; };
+		060C887814ED048A002B7DEA /* CIDoorwaySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 060C887714ED048A002B7DEA /* CIDoorwaySegue.m */; };
+		060C887A14ED04EA002B7DEA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060C887914ED04EA002B7DEA /* QuartzCore.framework */; };
 		06396AB114ECB2D8001174EC /* TweetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06396AB014ECB2D8001174EC /* TweetingViewController.m */; };
 		06396AB414ECBEE4001174EC /* goodguygreg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06396AB214ECBEE4001174EC /* goodguygreg.jpg */; };
 		06396AB514ECBEE4001174EC /* successkid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06396AB314ECBEE4001174EC /* successkid.jpg */; };
@@ -34,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060C886114ECF79E002B7DEA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		060C886414ECF7B4002B7DEA /* icon copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon copy.png"; path = "../icon copy.png"; sourceTree = "<group>"; };
+		060C886A14ECFE7F002B7DEA /* NewspaperSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewspaperSegue.h; sourceTree = "<group>"; };
+		060C886B14ECFE7F002B7DEA /* NewspaperSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewspaperSegue.m; sourceTree = "<group>"; };
+		060C887614ED048A002B7DEA /* CIDoorwaySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIDoorwaySegue.h; sourceTree = "<group>"; };
+		060C887714ED048A002B7DEA /* CIDoorwaySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIDoorwaySegue.m; sourceTree = "<group>"; };
+		060C887914ED04EA002B7DEA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		06396AAF14ECB2D8001174EC /* TweetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetingViewController.h; sourceTree = "<group>"; };
 		06396AB014ECB2D8001174EC /* TweetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetingViewController.m; sourceTree = "<group>"; };
 		06396AB214ECBEE4001174EC /* goodguygreg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = goodguygreg.jpg; sourceTree = "<group>"; };
@@ -76,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				060C887A14ED04EA002B7DEA /* QuartzCore.framework in Frameworks */,
 				06978C3D14EBB2D90057DC75 /* Accounts.framework in Frameworks */,
 				06978C3E14EBB2D90057DC75 /* Twitter.framework in Frameworks */,
 				06978C1114EBAE420057DC75 /* UIKit.framework in Frameworks */,
@@ -107,6 +120,7 @@
 		06978C0F14EBAE420057DC75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				060C887914ED04EA002B7DEA /* QuartzCore.framework */,
 				06978C3B14EBB2D90057DC75 /* Accounts.framework */,
 				06978C3C14EBB2D90057DC75 /* Twitter.framework */,
 				06978C1014EBAE420057DC75 /* UIKit.framework */,
@@ -133,6 +147,10 @@
 				06396AB014ECB2D8001174EC /* TweetingViewController.m */,
 				06396AB914ECBF2D001174EC /* ImagePickerViewController.h */,
 				06396ABA14ECBF2D001174EC /* ImagePickerViewController.m */,
+				060C886A14ECFE7F002B7DEA /* NewspaperSegue.h */,
+				060C886B14ECFE7F002B7DEA /* NewspaperSegue.m */,
+				060C887614ED048A002B7DEA /* CIDoorwaySegue.h */,
+				060C887714ED048A002B7DEA /* CIDoorwaySegue.m */,
 				06978C1714EBAE420057DC75 /* Supporting Files */,
 			);
 			path = IdocTwit;
@@ -141,6 +159,8 @@
 		06978C1714EBAE420057DC75 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				060C886414ECF7B4002B7DEA /* icon copy.png */,
+				060C886114ECF79E002B7DEA /* icon.png */,
 				06396ABC14ECC7FD001174EC /* timeline.png */,
 				06396ABD14ECC7FD001174EC /* timeline@2x.png */,
 				06396ABE14ECC7FD001174EC /* tweet.png */,
@@ -229,6 +249,8 @@
 				06396AC314ECC7FD001174EC /* tweet@2x.png in Resources */,
 				06396AC614ECC8D6001174EC /* gear.png in Resources */,
 				06396AC714ECC8D6001174EC /* gear@2x.png in Resources */,
+				060C886214ECF79E002B7DEA /* icon.png in Resources */,
+				060C886514ECF7B4002B7DEA /* icon copy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +270,8 @@
 				068741F314EC2C8F00F0DE8E /* TwitterAPIViewController.m in Sources */,
 				06396AB114ECB2D8001174EC /* TweetingViewController.m in Sources */,
 				06396ABB14ECBF2D001174EC /* ImagePickerViewController.m in Sources */,
+				060C886C14ECFE7F002B7DEA /* NewspaperSegue.m in Sources */,
+				060C887814ED048A002B7DEA /* CIDoorwaySegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

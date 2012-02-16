@@ -27,7 +27,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Saf-JA-CCw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="mi3-1e-cly" customClass="TweetingViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Mzx-D6-Ioj" customClass="Tweeting">
+                    <view key="view" contentMode="scaleToFill" id="Mzx-D6-Ioj">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -65,7 +65,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bVZ-NS-O0N" kind="modal" identifier="PickImage" modalTransitionStyle="flipHorizontal" id="tz1-CK-ee6"/>
+                                    <segue destination="bVZ-NS-O0N" kind="custom" identifier="PickImage" customClass="CIDoorwaySegue" id="tz1-CK-ee6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,8 +87,8 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vtc-81-TfX">
-                                <rect key="frame" x="65" y="40" width="191" height="180"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vtc-81-TfX">
+                                <rect key="frame" x="65" y="41" width="191" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="successkid.jpg">
@@ -102,8 +102,8 @@
                                     <action selector="selectImage:" destination="bVZ-NS-O0N" eventType="touchUpInside" id="jdd-Ls-eSq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mml-0w-pge">
-                                <rect key="frame" x="65" y="247" width="191" height="180"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mml-0w-pge">
+                                <rect key="frame" x="65" y="238" width="191" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="goodguygreg.jpg">
@@ -120,6 +120,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="549" y="-348"/>
