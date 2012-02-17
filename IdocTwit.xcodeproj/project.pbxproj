@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		060C886C14ECFE7F002B7DEA /* NewspaperSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 060C886B14ECFE7F002B7DEA /* NewspaperSegue.m */; };
 		060C887814ED048A002B7DEA /* CIDoorwaySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 060C887714ED048A002B7DEA /* CIDoorwaySegue.m */; };
 		060C887A14ED04EA002B7DEA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060C887914ED04EA002B7DEA /* QuartzCore.framework */; };
 		06396AB114ECB2D8001174EC /* TweetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06396AB014ECB2D8001174EC /* TweetingViewController.m */; };
@@ -39,8 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		060C886A14ECFE7F002B7DEA /* NewspaperSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewspaperSegue.h; sourceTree = "<group>"; };
-		060C886B14ECFE7F002B7DEA /* NewspaperSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewspaperSegue.m; sourceTree = "<group>"; };
 		060C887614ED048A002B7DEA /* CIDoorwaySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIDoorwaySegue.h; sourceTree = "<group>"; };
 		060C887714ED048A002B7DEA /* CIDoorwaySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIDoorwaySegue.m; sourceTree = "<group>"; };
 		060C887914ED04EA002B7DEA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -147,8 +144,6 @@
 				06396AB014ECB2D8001174EC /* TweetingViewController.m */,
 				06396AB914ECBF2D001174EC /* ImagePickerViewController.h */,
 				06396ABA14ECBF2D001174EC /* ImagePickerViewController.m */,
-				060C886A14ECFE7F002B7DEA /* NewspaperSegue.h */,
-				060C886B14ECFE7F002B7DEA /* NewspaperSegue.m */,
 				060C887614ED048A002B7DEA /* CIDoorwaySegue.h */,
 				060C887714ED048A002B7DEA /* CIDoorwaySegue.m */,
 				06978C1714EBAE420057DC75 /* Supporting Files */,
@@ -270,7 +265,6 @@
 				068741F314EC2C8F00F0DE8E /* TwitterAPIViewController.m in Sources */,
 				06396AB114ECB2D8001174EC /* TweetingViewController.m in Sources */,
 				06396ABB14ECBF2D001174EC /* ImagePickerViewController.m in Sources */,
-				060C886C14ECFE7F002B7DEA /* NewspaperSegue.m in Sources */,
 				060C887814ED048A002B7DEA /* CIDoorwaySegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
