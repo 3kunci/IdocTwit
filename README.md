@@ -11,6 +11,8 @@ IdocTwit is available under the MIT License.
 
 ## Credits
 
+Door animation is built from this code repo, [DoorwaySegue](https://github.com/jsmecham/DoorwaySegue) by [Justin Mecham](http://justin.mecham.me/).
+
 IdocTwit was created by [Ikhsan Assaat](https://github.com/ixnixnixn) for [#IDOC2012](https://twitter.com/#!/search?q=%23IDOC2012) event held by [id-objectiveC](http://www.id-objectivec.org/), a Indonesian Community of objective-c programmer.
 
 * [@ixnixnixn](http://twitter.com/ixnixnixn)
