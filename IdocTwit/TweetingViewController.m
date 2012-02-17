@@ -49,7 +49,6 @@
 }
 
 - (void)dismissThisController:(UIViewController *)controller {
-//    [self dismissModalViewControllerAnimated:YES];
     [self.view setHidden:NO];
     
     [UIView animateWithDuration:0.5 
